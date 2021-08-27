@@ -1,11 +1,16 @@
-<h1>Lists#index</h1>
+<div class="container text-center">
+  <h1>Movie Lists</h1>
+</div>
 
-<% @lists.each do |list| %>
-<ul>
-  <li><%= link_to list.name, list_path(list) %></li>
-</ul>
-<% end %>
+<div class="cards">
+  <% @lists.each do |list| %>
+  <ul>
+    <li><%= link_to list.name, list_path(list) %></li>
+  </ul>
+  <% end %>
+</div>
 
-<%= link_to 'Create new list', new_list_path %>
 
-<p>Find me in app/views/lists/index.html.erb</p>
+<div class="btn">
+  <%= link_to 'Create new list', new_list_path %>
+</div>
